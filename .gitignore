@@ -1,0 +1,15 @@
+.venv*/
+__pycache__/
+data/raw/*
+!data/raw/.gitkeep
+output/
+tmp/
+*.log
+output-*.txt
+evaluation/blind-sample.csv
+evaluation/audit-results.csv
+recording/
+private/
+evaluation/labels.csv
+evaluation/report.json
+docs/assignment-brief.txt
