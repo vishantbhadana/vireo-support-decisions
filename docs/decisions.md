@@ -1,0 +1,28 @@
+# Decisions, cost and limits
+
+## Decision ledger
+
+1. **Push back before building:** preserve Priya's monthly charts, but do not award the two hires to the largest intake queue. First-assigned volume includes wrong routes; resolver workload differs. Q2 Chat Frontline has 648 tickets, Billing 450 (19.0% of 2,364), Logistics 373 (15.8%). The email's 22% Billing share is not a current Q2 staffing case. Logistics' 25.93-hour median elapsed resolution versus Billing's 1.91 hours signals investigation, not measured utilisation. Tier 2 is deliberately not ranked against Tier 1.
+2. **Timezone:** policy §9 overrides the broad README “IST” description for legacy resolution only: add 05:30. Created/response remain as exported. 2,575 negative legacy intervals become zero. Keep raw files unchanged.
+3. **Population and identity:** 139 of 11,780 rows are outside Jan 2025–Jun 2026; keep 11,641. No duplicate ticket IDs or exact customer/creation/message duplicates observed. Do not fuzzy-delete repeats. Resolve roster by ID and assignment date, not display name; zero completed-ticket unmatched assignments.
+4. **Missing values:** 3,913 legacy transfer blanks mean unknown, not zero. 6,353 missing CSAT responses are excluded from means. Policy closed/auto-closed statuses count as attendance. No FCR claim from a same-customer/category proxy; recent resolutions lack a complete 30-day observation window.
+5. **Money:** no guessed legacy scaling. Native unit is unspecified; sampled explicit note amounts match stored amounts. Financial case uses only current-system Q2. Policy version effective April 2025 is not used to claim historical January–March 2025 incurred costs.
+6. **Model:** 11 issue categories, char TF-IDF + logistic regression; no external LLM. Training labels come from exactly one closing-note phrase family, never the unreliable bot tag. Inputs are opening text only, IDs/email/numbers removed. Names may remain in local text but nothing leaves the machine. Threshold 0.70 is a conservative pre-audit heuristic, not a calibrated probability. Multi-issue and unseen hardware cases require review.
+7. **Orders:** exact order/customer/SKU agreement only. 845 Q2 contacts lack an exact order match; customer+SKU fallback could attach the wrong purchase. Same-order checks span separate Q2 tickets, not only one row. Fifteen orders have both refund and replacement evidence (Rs 33,174 in refund amounts); seven GW-OTHER refunds exceed Rs 500 (Rs 22,577). Flags need reason-code, fulfilment and approval verification. They may overlap and are not added to savings. Cross-quarter conflicts can be missed.
+
+## Business goal / four-week pilot
+
+Retrospective cohort: Billing intake, explicit delivery closing note, opening-model delivery suggestion ≥0.70, positive observed transfers. 101 Q2 tickets, 134 transfers; 1.33 transfers per eligible ticket. Target **≤0.66 transfers per eligible ticket** (50% reduction), worth Rs 20,435/quarter or Rs 81,740/year if volume/mix hold. This counts *all* recorded transfers in this cohort, not verified Billing→Logistics transitions: individual transfer destinations are unavailable. 50% is a hypothesis, not an estimated causal effect.
+
+Neha owns a four-week assisted-routing pilot. Review all proposed reroutes, split comparable eligible arrivals between current flow and assisted flow, and record actual destination, transfers, first-response SLA and customer outcome. Finance validates the Rs 305 standard as capacity rather than payroll cash. Go forward only with at least 50% transfer reduction, no worse first-response breach rate and no serious misroutes; otherwise stop/tune. Low sample counts extend observation, not justify a success claim. Sameer supplies arrival/active-handling/staffed-hour data before any permanent staffing decision.
+
+## Cost arithmetic
+
+- No paid inference/API calls. One complete analysis run: **Rs 0 API cost**; measured about 13–15 seconds for the supplied 11,641 in-window records on this Mac (not a cloud benchmark).
+- Requested planning volume: 650 × 52 / 12 = **2,816.7 tickets/month**. Local inference has no per-ticket charge: 2,816.7 × Rs 0 = **Rs 0/month API cost**. Daily 30 batch reruns also cost 30 × Rs 0 = Rs 0 in API fees.
+- Compute is not free: using an explicit *illustrative, unmetered* 30-second run, 30 W laptop load and Rs 10/kWh gives (30/3600) × 0.030 × 10 = **Rs 0.0025/run**, or Rs 0.075/month for 30 runs. This excludes idle server time, hardware, labour and hosting. Actual electricity and development-assistant billing were not supplied; no invented “total cost”. Existing Codex access was used; no separate model/API purchase was made.
+- The exported Q2 data has 2,364 tickets, about 182/week, far below the stated 650/week. Do **not** multiply savings by 650/182 without reconciling export completeness. Pricing scenario and observed business case intentionally use different denominators.
+
+## Deliberately omitted
+
+No LLM/RAG/vector database/agent chain, helpdesk write integration, live rerouting, auth/hosting, or workforce optimiser. These add cost/risk without improving this narrow decision. No precise FCR, active-handle staffing estimate, product-lot failure rate (sales denominators/issue confirmation needed), or recovered-refund estimate. No raw customer export in public Git. The form was reconstructed from the live portal's questions because no submission-form.md download was listed.
