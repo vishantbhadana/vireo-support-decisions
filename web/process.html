@@ -1,0 +1,27 @@
+<!doctype html><meta charset="utf-8"><title>Vireo — actual prompts and work log</title><style>body{max-width:1000px;margin:36px auto;font:18px/1.55 system-ui;color:#173d34;background:#f3f6f2}pre{white-space:pre-wrap;background:white;border:1px solid #ccd9d0;padding:28px;border-radius:12px;font:17px/1.65 system-ui}a{color:#175f45}</style><a href="/">← Working tool</a><h1>Actual prompts & iteration record</h1><pre># AI use and actual iteration record
+
+## Prompt used (verbatim excerpt from the candidate&#x27;s request)
+
+“Remember when you are doing the assignment l want you to take care of each and every point they mentioned and be very very specific about each and everything.”
+
+“We dont need to be very exhaustive but smart. I want you to first analyze everything smartly and once done with that then i want you to build something very very optimized so that there would not be too much complexities.”
+
+This was one Codex coding-assistant session, with the supplied assignment/pack as context. No separate chat-model prompt chain or inference API was used. The assistant read the brief, generated and ran Python/HTML, interpreted the blind sample, wrote the memo and performed checks. It would be misleading to present this as independently human-written or human-validated work. Codex is a GPT-6-based coding assistant; an exact deployed model variant or account billing total was not supplied to the task.
+
+## Actual changes (29 September 2026, started about 19:00 IST)
+
+1. Read policy, email and raw files. Narrowed the hiring request to charts plus a routing pilot. Rejected elapsed-resolution-hours × wage as staffing cost, and did not guess the legacy currency scale.
+2. Built local character TF-IDF/logistic regression with closing-note weak labels and opening-only features. Held out Q2, excluded repeated exact normalized texts from the secondary temporal test. Kept a 0.70 review threshold.
+3. Drew 60 Q2 openings, assigned labels without seeing predictions, then joined predictions. Four category mismatches were all below threshold. Did not tune the threshold on those results. Discarded a possible headline “99% accurate”: that number measures agreement with weak labels, not independent correctness.
+4. Replaced repeated roster DataFrame filtering with an agent-ID lookup. Replaced the initial Python 3.14/NumPy 2.5 environment after excessive pandas datetime warnings with pinned Python 3.12-compatible dependencies.
+5. Corrected a real scope bug: refund-plus-replacement had been checked within one ticket, yielding zero. The policy is per order; grouping matched Q2 tickets found 15 affected orders. Added a regression test and a separate goodwill-cap review. Neither was added to the routing savings.
+6. Added reconciliation tests, fail-fast duplicate/date handling, accessible monthly CSVs, local request validation and a concise handoff. Tested the dashboard in the browser: Billing chart selection, a connectivity message and empty-input rejection.
+
+## Discarded vs never built
+
+Actually discarded/replaced: the incompatible runtime, slow roster lookup, same-ticket-only Finance check, and the misleading weak-label-accuracy interpretation. Not built at all: hosted LLM/RAG, automated helpdesk actions, staffing optimiser and causal savings model. These are scope decisions, not imaginary earlier prototypes.
+
+## Cost and time honesty
+
+No paid runtime calls or external customer-data uploads. Development used existing Codex access; its billing was not available. Run/month arithmetic is in decisions.md. Final elapsed working time is entered after packaging; it is not automatically set to the five-hour cap. The walkthrough records the actual local app and this process log, not a recreated chat or slides.
+</pre>
