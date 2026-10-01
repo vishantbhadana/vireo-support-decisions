@@ -1,0 +1,2445 @@
+{
+  "purpose": "Python/JavaScript implementation parity; not classification accuracy",
+  "tests": [
+    {
+      "name": "authored-example-1",
+      "message": "My parcel still has not arrived and the tracking status has not changed.",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.533,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.533
+          },
+          {
+            "category": "Returns & Refunds",
+            "score": 0.053
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.051
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-2",
+      "message": "The courier says delivered but I did not receive my headphones.",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.608,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.608
+          },
+          {
+            "category": "Returns & Refunds",
+            "score": 0.046
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.044
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-3",
+      "message": "When will my order reach my home? The delivery is late.",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.553,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.553
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.075
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.059
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-4",
+      "message": "The shipping tracker shows my package is lost in transit.",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.55,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.55
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.067
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.049
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-5",
+      "message": "I received the wrong colour earbuds in the delivered package.",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.641,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.641
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.046
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.043
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-6",
+      "message": "The box arrived damaged and the product was broken during shipping.",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.534,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.534
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.068
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.062
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-7",
+      "message": "Please check the expected delivery date for my delayed shipment.",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.56,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.56
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.068
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.059
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-8",
+      "message": "My order is out for delivery but the courier has not contacted me.",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.625,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.625
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.062
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.053
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-9",
+      "message": "I returned the headphones but my refund has not reached my bank.",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.637,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.637
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.052
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.041
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-10",
+      "message": "The return pickup was scheduled for yesterday and nobody came.",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.624,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.624
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.052
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.042
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-11",
+      "message": "Please arrange a reverse pickup for the product I want to return.",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.579,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.579
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.067
+          },
+          {
+            "category": "Warranty & Repair",
+            "score": 0.054
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-12",
+      "message": "My return was accepted but the refund is still pending.",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.664,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.664
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.061
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.041
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-13",
+      "message": "How can I return these earbuds and get my money back?",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.559,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.559
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.065
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.053
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-14",
+      "message": "The courier collected my return but there is no refund update.",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.627,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.627
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.064
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.047
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-15",
+      "message": "I am waiting for reimbursement after returning the speaker.",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.545,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.545
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.059
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.053
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-16",
+      "message": "Please tell me the status of the refund for my returned item.",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.672,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.672
+          },
+          {
+            "category": "Warranty & Repair",
+            "score": 0.055
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.037
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-17",
+      "message": "I was charged twice for a single order and need the duplicate payment checked.",
+      "expected": {
+        "category": "Billing & Payments",
+        "score": 0.576,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Billing & Payments",
+            "score": 0.576
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.065
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.051
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-18",
+      "message": "The payment failed but money was deducted from my bank account.",
+      "expected": {
+        "category": "Billing & Payments",
+        "score": 0.553,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Billing & Payments",
+            "score": 0.553
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.065
+          },
+          {
+            "category": "Returns & Refunds",
+            "score": 0.064
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-19",
+      "message": "Please send the tax invoice for my purchase.",
+      "expected": {
+        "category": "Billing & Payments",
+        "score": 0.577,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Billing & Payments",
+            "score": 0.577
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.059
+          },
+          {
+            "category": "Warranty & Repair",
+            "score": 0.055
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-20",
+      "message": "The GST number on my invoice is incorrect and needs to be updated.",
+      "expected": {
+        "category": "Billing & Payments",
+        "score": 0.496,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Billing & Payments",
+            "score": 0.496
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.074
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.069
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-21",
+      "message": "My card was debited but the checkout did not create an order.",
+      "expected": {
+        "category": "Billing & Payments",
+        "score": 0.574,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Billing & Payments",
+            "score": 0.574
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.067
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.063
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-22",
+      "message": "There are two identical card charges for the same purchase.",
+      "expected": {
+        "category": "Billing & Payments",
+        "score": 0.552,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Billing & Payments",
+            "score": 0.552
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.069
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.069
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-23",
+      "message": "The billed amount does not match the price shown at checkout.",
+      "expected": {
+        "category": "Billing & Payments",
+        "score": 0.555,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Billing & Payments",
+            "score": 0.555
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.053
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.052
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-24",
+      "message": "My discount coupon was accepted but the discount is missing from the bill.",
+      "expected": {
+        "category": "Billing & Payments",
+        "score": 0.536,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Billing & Payments",
+            "score": 0.536
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.071
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.063
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-25",
+      "message": "My earbuds will not charge when I place them inside the charging case.",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.618,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.618
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.049
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.048
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-26",
+      "message": "The battery drains completely after only a short time.",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.549,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.549
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.065
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.058
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-27",
+      "message": "My headphones do not turn on even after charging overnight.",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.582,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.582
+          },
+          {
+            "category": "Returns & Refunds",
+            "score": 0.053
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-28",
+      "message": "The charger is connected but the battery percentage never increases.",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.578,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.578
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.073
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.055
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-29",
+      "message": "One earbud has no power and the charging light stays off.",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.576,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.576
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.075
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.049
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-30",
+      "message": "The speaker battery does not hold a charge anymore.",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.632,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.632
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.065
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.043
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-31",
+      "message": "My charging case is not charging with the supplied cable.",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.66,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.66
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.047
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.043
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-32",
+      "message": "The smartwatch loses its entire battery within an hour.",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.531,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.531
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.105
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.047
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-33",
+      "message": "My earbuds will not pair with my phone over Bluetooth.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.594,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.594
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.058
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-34",
+      "message": "The Bluetooth connection keeps disconnecting during use.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.715,
+        "review": false,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.715
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.035
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.033
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-35",
+      "message": "My phone cannot discover the speaker in the list of nearby devices.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.569,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.569
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.067
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.053
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-36",
+      "message": "I cannot connect my headphones to my laptop.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.6,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.6
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.052
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.049
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-37",
+      "message": "The wireless speaker cannot connect to my home Wi-Fi network.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.597,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.597
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.053
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.053
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-38",
+      "message": "Pairing fails every time I try to connect these earbuds.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.588,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.588
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.062
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.058
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-39",
+      "message": "The connection drops whenever I move away from the phone.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.586,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.586
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.05
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.049
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-40",
+      "message": "The device is not discoverable and Bluetooth pairing never completes.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.621,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.621
+          },
+          {
+            "category": "Warranty & Repair",
+            "score": 0.047
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.047
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-41",
+      "message": "The left earbud is silent while the right side plays normally.",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.529,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.529
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.066
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.061
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-42",
+      "message": "The sound from my speaker is distorted and crackles.",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.549,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.549
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.059
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.056
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-43",
+      "message": "People cannot hear me because the microphone is not working.",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.529,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.529
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.076
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.063
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-44",
+      "message": "There is no audio coming from the headphones although music is playing.",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.568,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.568
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.058
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.045
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-45",
+      "message": "The microphone volume is extremely low during calls.",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.56,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.56
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.052
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.051
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-46",
+      "message": "Only one side of the earbuds produces sound.",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.574,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.574
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.062
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.059
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-47",
+      "message": "The audio sounds muffled and has a constant buzzing noise.",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.563,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.563
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.06
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-48",
+      "message": "Music quality is poor and the speaker makes a hissing sound.",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.605,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.605
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.061
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.044
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-49",
+      "message": "The companion app crashes every time I open it.",
+      "expected": {
+        "category": "App & Firmware",
+        "score": 0.582,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "App & Firmware",
+            "score": 0.582
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.06
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-50",
+      "message": "My firmware update is stuck and will not finish installing.",
+      "expected": {
+        "category": "App & Firmware",
+        "score": 0.608,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "App & Firmware",
+            "score": 0.608
+          },
+          {
+            "category": "Warranty & Repair",
+            "score": 0.046
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.045
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-51",
+      "message": "The mobile app does not open after the latest update.",
+      "expected": {
+        "category": "App & Firmware",
+        "score": 0.568,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "App & Firmware",
+            "score": 0.568
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.057
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.052
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-52",
+      "message": "The firmware upgrade failed and shows an installation error.",
+      "expected": {
+        "category": "App & Firmware",
+        "score": 0.596,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "App & Firmware",
+            "score": 0.596
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.057
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.053
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-53",
+      "message": "The app freezes when I change the equalizer settings.",
+      "expected": {
+        "category": "App & Firmware",
+        "score": 0.568,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "App & Firmware",
+            "score": 0.568
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.055
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.049
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-54",
+      "message": "I cannot install the new firmware through the companion application.",
+      "expected": {
+        "category": "App & Firmware",
+        "score": 0.691,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "App & Firmware",
+            "score": 0.691
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.042
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.042
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-55",
+      "message": "The software update remains on the loading screen indefinitely.",
+      "expected": {
+        "category": "App & Firmware",
+        "score": 0.531,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "App & Firmware",
+            "score": 0.531
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.06
+          },
+          {
+            "category": "Warranty & Repair",
+            "score": 0.053
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-56",
+      "message": "The application closes unexpectedly when I open device settings.",
+      "expected": {
+        "category": "App & Firmware",
+        "score": 0.619,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "App & Firmware",
+            "score": 0.619
+          },
+          {
+            "category": "Warranty & Repair",
+            "score": 0.046
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.045
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-57",
+      "message": "I cannot log into my account because the login code never arrives.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.617,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.617
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.053
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-58",
+      "message": "My account is locked and I need help signing in.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.649,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.649
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.062
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.04
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-59",
+      "message": "The one time password is not reaching my email.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.562,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.562
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.053
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-60",
+      "message": "I forgot my password and cannot reset my account login.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.689,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.689
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.045
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.035
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-61",
+      "message": "The sign in screen rejects the correct verification code.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.504,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.504
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.078
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.069
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-62",
+      "message": "Please help me access my account after changing my phone number.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.519,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.519
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.075
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.071
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-63",
+      "message": "The OTP is invalid every time I try to log in.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.532,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.532
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.059
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.059
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-64",
+      "message": "I cannot sign in with my registered email address.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.562,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.562
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.058
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.054
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-65",
+      "message": "Do these headphones work with my gaming console before I buy them?",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.519,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.519
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.064
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.063
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-66",
+      "message": "Please share the technical specifications of this speaker.",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.527,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.527
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.057
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.052
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-67",
+      "message": "Is this smartwatch compatible with an Android phone?",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.537,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.537
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.072
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.052
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-68",
+      "message": "What is the difference between these two earbud models?",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.5,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.5
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.065
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.053
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-69",
+      "message": "I want to know the battery life and features before purchasing.",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.47,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.47
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.081
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.078
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-70",
+      "message": "Does this product support noise cancellation and multipoint pairing?",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.544,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.544
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.058
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.055
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-71",
+      "message": "Can you provide the product dimensions and weight?",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.531,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.531
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.064
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.049
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-72",
+      "message": "Which speaker would be suitable for a small room?",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.529,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.529
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.069
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.051
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-73",
+      "message": "Please tell me the status of my warranty repair claim.",
+      "expected": {
+        "category": "Warranty & Repair",
+        "score": 0.674,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Warranty & Repair",
+            "score": 0.674
+          },
+          {
+            "category": "Returns & Refunds",
+            "score": 0.052
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.037
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-74",
+      "message": "My headphones are at the service centre and I need a repair update.",
+      "expected": {
+        "category": "Warranty & Repair",
+        "score": 0.706,
+        "review": false,
+        "alternatives": [
+          {
+            "category": "Warranty & Repair",
+            "score": 0.706
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.037
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.035
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-75",
+      "message": "How do I claim warranty service for my broken speaker?",
+      "expected": {
+        "category": "Warranty & Repair",
+        "score": 0.631,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Warranty & Repair",
+            "score": 0.631
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.05
+          },
+          {
+            "category": "Returns & Refunds",
+            "score": 0.041
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-76",
+      "message": "Is my device still covered by the manufacturer warranty?",
+      "expected": {
+        "category": "Warranty & Repair",
+        "score": 0.568,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Warranty & Repair",
+            "score": 0.568
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.057
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.052
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-77",
+      "message": "The repair centre has not updated my service request.",
+      "expected": {
+        "category": "Warranty & Repair",
+        "score": 0.682,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Warranty & Repair",
+            "score": 0.682
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.044
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.042
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-78",
+      "message": "I need an update on the RMA and the replacement under warranty.",
+      "expected": {
+        "category": "Warranty & Repair",
+        "score": 0.563,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Warranty & Repair",
+            "score": 0.563
+          },
+          {
+            "category": "Order Changes",
+            "score": 0.067
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.058
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-79",
+      "message": "Where can I find an authorised repair centre for my headphones?",
+      "expected": {
+        "category": "Warranty & Repair",
+        "score": 0.581,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Warranty & Repair",
+            "score": 0.581
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.056
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.049
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-80",
+      "message": "Please check the progress of the device I sent for repair.",
+      "expected": {
+        "category": "Warranty & Repair",
+        "score": 0.562,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Warranty & Repair",
+            "score": 0.562
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.072
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.047
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-81",
+      "message": "Please cancel my order before it is dispatched.",
+      "expected": {
+        "category": "Order Changes",
+        "score": 0.663,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Order Changes",
+            "score": 0.663
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.063
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.044
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-82",
+      "message": "I need to change the delivery address on my order.",
+      "expected": {
+        "category": "Order Changes",
+        "score": 0.593,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Order Changes",
+            "score": 0.593
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.108
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.056
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-83",
+      "message": "Can I update the phone number for an order I just placed?",
+      "expected": {
+        "category": "Order Changes",
+        "score": 0.527,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Order Changes",
+            "score": 0.527
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.068
+          },
+          {
+            "category": "Warranty & Repair",
+            "score": 0.06
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-84",
+      "message": "I accidentally placed the order and want to cancel it.",
+      "expected": {
+        "category": "Order Changes",
+        "score": 0.606,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Order Changes",
+            "score": 0.606
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.05
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.047
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-85",
+      "message": "Please change my shipping address before the package leaves the warehouse.",
+      "expected": {
+        "category": "Order Changes",
+        "score": 0.571,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Order Changes",
+            "score": 0.571
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.081
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-86",
+      "message": "I selected the wrong model and need to modify my order.",
+      "expected": {
+        "category": "Order Changes",
+        "score": 0.539,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Order Changes",
+            "score": 0.539
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.064
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.057
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-87",
+      "message": "Can you remove one item from the order before shipping?",
+      "expected": {
+        "category": "Order Changes",
+        "score": 0.609,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Order Changes",
+            "score": 0.609
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.061
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.056
+          }
+        ]
+      }
+    },
+    {
+      "name": "authored-example-88",
+      "message": "I want to change the order quantity before dispatch.",
+      "expected": {
+        "category": "Order Changes",
+        "score": 0.69,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Order Changes",
+            "score": 0.69
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.05
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.037
+          }
+        ]
+      }
+    },
+    {
+      "name": "delivery-paraphrase",
+      "message": "My parcel hasn't arrived. Could you check the delivery status?",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.535,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.535
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.06
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.059
+          }
+        ]
+      }
+    },
+    {
+      "name": "connectivity-paraphrase",
+      "message": "Bluetooth keeps disconnecting from my laptop.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.669,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.669
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.048
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.041
+          }
+        ]
+      }
+    },
+    {
+      "name": "short-one-letter",
+      "message": "a",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.123,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.123
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.121
+          },
+          {
+            "category": "Charging & Battery",
+            "score": 0.104
+          }
+        ]
+      }
+    },
+    {
+      "name": "short-two-letters",
+      "message": "hi",
+      "expected": {
+        "category": "Audio Quality",
+        "score": 0.125,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Audio Quality",
+            "score": 0.125
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.115
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.095
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown",
+      "message": "zyxqv zyxqv",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.119,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.119
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.105
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.097
+          }
+        ]
+      }
+    },
+    {
+      "name": "repeated",
+      "message": "refund refund refund refund refund",
+      "expected": {
+        "category": "Returns & Refunds",
+        "score": 0.475,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Returns & Refunds",
+            "score": 0.475
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.07
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.065
+          }
+        ]
+      }
+    },
+    {
+      "name": "literal-newline",
+      "message": "my parcel\\nhas not arrived",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.423,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.423
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.078
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.063
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual-newline",
+      "message": "my parcel\nhas not arrived",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.423,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.423
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.078
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.063
+          }
+        ]
+      }
+    },
+    {
+      "name": "email-and-identifiers",
+      "message": "My parcel VR12345 TK-999 is late; contact invented@example.test",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.231,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.231
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.096
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.086
+          }
+        ]
+      }
+    },
+    {
+      "name": "unicode-accent",
+      "message": "Café headphones have a Bluetooth connexion problem.",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.472,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.472
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.088
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.068
+          }
+        ]
+      }
+    },
+    {
+      "name": "unicode-emoji",
+      "message": "My earbuds 🔋 will not charge 😟",
+      "expected": {
+        "category": "Charging & Battery",
+        "score": 0.389,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Charging & Battery",
+            "score": 0.389
+          },
+          {
+            "category": "Connectivity",
+            "score": 0.105
+          },
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.08
+          }
+        ]
+      }
+    },
+    {
+      "name": "unicode-only",
+      "message": "こんにちは 世界",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.119,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.119
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.105
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.097
+          }
+        ]
+      }
+    },
+    {
+      "name": "unicode-whitespace",
+      "message": "My parcel has not arrived",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.423,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.423
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.078
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.063
+          }
+        ]
+      }
+    },
+    {
+      "name": "compatibility-normalization",
+      "message": "Ｍｙ ｐａｒｃｅｌ ｈａｓ ｎｏｔ ａｒｒｉｖｅｄ",
+      "expected": {
+        "category": "Delivery & Shipping",
+        "score": 0.423,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Delivery & Shipping",
+            "score": 0.423
+          },
+          {
+            "category": "Account & Login",
+            "score": 0.078
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.063
+          }
+        ]
+      }
+    },
+    {
+      "name": "punctuation",
+      "message": "Bluetooth??? Pairing!!! Failed...",
+      "expected": {
+        "category": "Connectivity",
+        "score": 0.429,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Connectivity",
+            "score": 0.429
+          },
+          {
+            "category": "Billing & Payments",
+            "score": 0.078
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.077
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown-hardware",
+      "message": "The touchscreen is unresponsive.",
+      "expected": {
+        "category": "Account & Login",
+        "score": 0.139,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Account & Login",
+            "score": 0.139
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.137
+          },
+          {
+            "category": "Product Enquiry",
+            "score": 0.115
+          }
+        ]
+      }
+    },
+    {
+      "name": "max-length-valid",
+      "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "expected": {
+        "category": "Product Enquiry",
+        "score": 0.119,
+        "review": true,
+        "alternatives": [
+          {
+            "category": "Product Enquiry",
+            "score": 0.119
+          },
+          {
+            "category": "Audio Quality",
+            "score": 0.105
+          },
+          {
+            "category": "App & Firmware",
+            "score": 0.097
+          }
+        ]
+      }
+    },
+    {
+      "name": "empty",
+      "message": "",
+      "error": "Enter a customer message containing words"
+    },
+    {
+      "name": "spaces",
+      "message": " \n\t ",
+      "error": "Enter a customer message containing words"
+    },
+    {
+      "name": "identifiers-only",
+      "message": "VR1234 TK567 invented@example.test",
+      "error": "Enter a customer message containing words"
+    },
+    {
+      "name": "over-limit",
+      "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "error": "Message is too long (maximum 5000 characters)"
+    },
+    {
+      "name": "non-string",
+      "message": null,
+      "error": "Enter a customer message"
+    }
+  ]
+}

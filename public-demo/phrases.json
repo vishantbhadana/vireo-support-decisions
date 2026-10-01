@@ -1,0 +1,112 @@
+{
+  "Delivery & Shipping": [
+    "My parcel still has not arrived and the tracking status has not changed.",
+    "The courier says delivered but I did not receive my headphones.",
+    "When will my order reach my home? The delivery is late.",
+    "The shipping tracker shows my package is lost in transit.",
+    "I received the wrong colour earbuds in the delivered package.",
+    "The box arrived damaged and the product was broken during shipping.",
+    "Please check the expected delivery date for my delayed shipment.",
+    "My order is out for delivery but the courier has not contacted me."
+  ],
+  "Returns & Refunds": [
+    "I returned the headphones but my refund has not reached my bank.",
+    "The return pickup was scheduled for yesterday and nobody came.",
+    "Please arrange a reverse pickup for the product I want to return.",
+    "My return was accepted but the refund is still pending.",
+    "How can I return these earbuds and get my money back?",
+    "The courier collected my return but there is no refund update.",
+    "I am waiting for reimbursement after returning the speaker.",
+    "Please tell me the status of the refund for my returned item."
+  ],
+  "Billing & Payments": [
+    "I was charged twice for a single order and need the duplicate payment checked.",
+    "The payment failed but money was deducted from my bank account.",
+    "Please send the tax invoice for my purchase.",
+    "The GST number on my invoice is incorrect and needs to be updated.",
+    "My card was debited but the checkout did not create an order.",
+    "There are two identical card charges for the same purchase.",
+    "The billed amount does not match the price shown at checkout.",
+    "My discount coupon was accepted but the discount is missing from the bill."
+  ],
+  "Charging & Battery": [
+    "My earbuds will not charge when I place them inside the charging case.",
+    "The battery drains completely after only a short time.",
+    "My headphones do not turn on even after charging overnight.",
+    "The charger is connected but the battery percentage never increases.",
+    "One earbud has no power and the charging light stays off.",
+    "The speaker battery does not hold a charge anymore.",
+    "My charging case is not charging with the supplied cable.",
+    "The smartwatch loses its entire battery within an hour."
+  ],
+  "Connectivity": [
+    "My earbuds will not pair with my phone over Bluetooth.",
+    "The Bluetooth connection keeps disconnecting during use.",
+    "My phone cannot discover the speaker in the list of nearby devices.",
+    "I cannot connect my headphones to my laptop.",
+    "The wireless speaker cannot connect to my home Wi-Fi network.",
+    "Pairing fails every time I try to connect these earbuds.",
+    "The connection drops whenever I move away from the phone.",
+    "The device is not discoverable and Bluetooth pairing never completes."
+  ],
+  "Audio Quality": [
+    "The left earbud is silent while the right side plays normally.",
+    "The sound from my speaker is distorted and crackles.",
+    "People cannot hear me because the microphone is not working.",
+    "There is no audio coming from the headphones although music is playing.",
+    "The microphone volume is extremely low during calls.",
+    "Only one side of the earbuds produces sound.",
+    "The audio sounds muffled and has a constant buzzing noise.",
+    "Music quality is poor and the speaker makes a hissing sound."
+  ],
+  "App & Firmware": [
+    "The companion app crashes every time I open it.",
+    "My firmware update is stuck and will not finish installing.",
+    "The mobile app does not open after the latest update.",
+    "The firmware upgrade failed and shows an installation error.",
+    "The app freezes when I change the equalizer settings.",
+    "I cannot install the new firmware through the companion application.",
+    "The software update remains on the loading screen indefinitely.",
+    "The application closes unexpectedly when I open device settings."
+  ],
+  "Account & Login": [
+    "I cannot log into my account because the login code never arrives.",
+    "My account is locked and I need help signing in.",
+    "The one time password is not reaching my email.",
+    "I forgot my password and cannot reset my account login.",
+    "The sign in screen rejects the correct verification code.",
+    "Please help me access my account after changing my phone number.",
+    "The OTP is invalid every time I try to log in.",
+    "I cannot sign in with my registered email address."
+  ],
+  "Product Enquiry": [
+    "Do these headphones work with my gaming console before I buy them?",
+    "Please share the technical specifications of this speaker.",
+    "Is this smartwatch compatible with an Android phone?",
+    "What is the difference between these two earbud models?",
+    "I want to know the battery life and features before purchasing.",
+    "Does this product support noise cancellation and multipoint pairing?",
+    "Can you provide the product dimensions and weight?",
+    "Which speaker would be suitable for a small room?"
+  ],
+  "Warranty & Repair": [
+    "Please tell me the status of my warranty repair claim.",
+    "My headphones are at the service centre and I need a repair update.",
+    "How do I claim warranty service for my broken speaker?",
+    "Is my device still covered by the manufacturer warranty?",
+    "The repair centre has not updated my service request.",
+    "I need an update on the RMA and the replacement under warranty.",
+    "Where can I find an authorised repair centre for my headphones?",
+    "Please check the progress of the device I sent for repair."
+  ],
+  "Order Changes": [
+    "Please cancel my order before it is dispatched.",
+    "I need to change the delivery address on my order.",
+    "Can I update the phone number for an order I just placed?",
+    "I accidentally placed the order and want to cancel it.",
+    "Please change my shipping address before the package leaves the warehouse.",
+    "I selected the wrong model and need to modify my order.",
+    "Can you remove one item from the order before shipping?",
+    "I want to change the order quantity before dispatch."
+  ]
+}
