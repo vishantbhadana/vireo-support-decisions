@@ -4,7 +4,7 @@ A small, local tool for monthly category/team reporting and opening-message tria
 
 ## Open the public demo
 
-[Live dashboard](https://vishantbhadana.github.io/vireo-support-decisions/) · [1:40 original app walkthrough](https://drive.google.com/file/d/1VP9CjSd_xVwCxyG2zL_TCapyK6uIWuaD/view?usp=sharing)
+[Live dashboard](https://vishantbhadana.github.io/vireo-support-decisions/) · [Captioned walkthrough](https://drive.google.com/file/d/1VP9CjSd_xVwCxyG2zL_TCapyK6uIWuaD/view?usp=sharing)
 
 The public site contains aggregate findings and a **separate, synthetic-only demonstration classifier** that runs in the visitor's browser. It does not contain customer messages, individual ticket/order records or the model trained on the supplied pack. The **56/60 audit applies only to the original local model**, not the public sample classifier. Use the local instructions below to reproduce the full assignment results. GitHub Pages hosts this static demonstration for free; no API or paid backend is required. Entered sample text is not transmitted or saved.
 
@@ -52,7 +52,7 @@ Observed: 56/60 category matches (93.3%); 4/60 errors (6.7%), all four routed to
 
 Q2: 101 of 450 Billing intake tickets satisfy a conservative delivery-misroute review definition, with 134 recorded transfers. Halving those transfers gives **134 × Rs 305 × 50% = Rs 20,435 per quarter** in capacity value at unchanged volume. This is a pilot target, not booked cash or a reason to eliminate jobs. The historical eligibility definition uses closing-note evidence; deployment uses opening-message suggestions plus human confirmation.
 
-See [Priya memo](docs/memo-priya.md), [decisions/costs](docs/decisions.md), [AI work log](docs/work-log.md), and [submission answers](submission-form.md). Memo PDF is a private handoff artifact, generated separately.
+See [Priya memo](docs/memo-priya.md), [decisions/costs](docs/decisions.md), [AI work log](docs/work-log.md), and [submission answers](submission-form.md). A printable [one-page memo PDF](docs/Priya-Memo.pdf) is also included.
 
 ## Architecture and privacy
 

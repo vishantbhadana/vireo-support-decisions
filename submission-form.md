@@ -1,10 +1,10 @@
 # Submission — Vireo Audio / Set E
 
-These answers follow the live portal's questions; no downloadable submission-form.md was listed. Prepared with substantial AI assistance, disclosed below. Not submitted.
+These answers follow the live portal's questions; no downloadable submission-form.md was listed. Prepared with substantial AI assistance, disclosed below.
 
 ## What did you build, and what business outcome does it move? State the number and the money.
 
-A local Python tool with monthly inferred-category, intake-team and resolving-team charts, CSV exports, opening-message classification and a human-review path. I narrowed the decision to a routing pilot: 101 Q2 Billing tickets have clear delivery evidence and 134 recorded transfers. Target reducing comparable tickets from 1.33 to 0.66 transfers each. 134 × Rs 305 × 50% = Rs 20,435/quarter in released capacity at unchanged volume, not guaranteed cash. The export cannot prove which team needs two hires; it lacks active effort and staffed capacity. Closing notes establish the retrospective cohort; new suggestions use opening text only and require human confirmation.
+A local Python tool with monthly inferred-category, intake-team and resolving-team charts, CSV exports, opening-message classification and a human-review path. I narrowed the decision to a routing pilot: 101 Q2 Billing tickets have clear delivery evidence and 134 recorded transfers. Target reducing comparable tickets from 1.33 to 0.66 transfers each. 134 × Rs 305 × 50% = Rs 20,435/quarter in released capacity at unchanged volume, not guaranteed cash. The export cannot prove which team needs two hires; it lacks active effort and staffed capacity. Closing notes establish the retrospective cohort; new suggestions use opening text only and require human confirmation. Public demo: https://vishantbhadana.github.io/vireo-support-decisions/ (synthetic demo classifier, separate from the evaluated local model). One-page memo: https://github.com/vishantbhadana/vireo-support-decisions/blob/main/docs/Priya-Memo.pdf
 
 ## What does one run cost, and what would a month cost at roughly 650 tickets a week? Show arithmetic.
 
@@ -32,7 +32,7 @@ Corrected 2,575 negative legacy resolution intervals using the policy's UTC→IS
 
 ## What did you use AI for? Tools/models, help, wasted effort, discarded work. Video link.
 
-Used Codex, a GPT-6-based coding assistant, to read the pack, generate Python/HTML, inspect data, annotate the blind sample, write/test the tool and draft the memo. No separately called LLM inference API. Exact deployed variant and account billing were not supplied. AI helped simplify scope and find data issues; the first runtime choice wasted time through pandas/NumPy warnings. Replaced that runtime, a slow roster lookup and a same-ticket-only refund check. Discarded the misleading “99% accuracy” interpretation of weak-label agreement. The local runtime classifier is scikit-learn TF-IDF + logistic regression. Actual prompt excerpts and iterations are in docs/work-log.md; no invented prompt history. The screen recording is an actual browser capture of the app and log, with no slides.
+Used Codex, a GPT-6-based coding assistant, to read the pack, generate Python/HTML, inspect data, annotate the blind sample, write/test the tool and draft the memo. No separately called LLM inference API. Exact deployed variant and account billing were not supplied. AI helped simplify scope and find data issues; the first runtime choice wasted time through pandas/NumPy warnings. Replaced that runtime, a slow roster lookup and a same-ticket-only refund check. Discarded the misleading “99% accuracy” interpretation of weak-label agreement. The local runtime classifier is scikit-learn TF-IDF + logistic regression. Actual prompt excerpts and iterations are in docs/work-log.md; no invented prompt history. The final captioned screen recording is an actual browser capture of the prompt/iteration log, original local app and public demo, with no slides.
 
 Public Google Drive video: https://drive.google.com/file/d/1VP9CjSd_xVwCxyG2zL_TCapyK6uIWuaD/view?usp=sharing
 
@@ -44,7 +44,7 @@ Public Google Drive video: https://drive.google.com/file/d/1VP9CjSd_xVwCxyG2zL_T
 
 ## Honest hours spent — one number
 
-0.9
+1.3
 
 ## Public GitHub repository
 
@@ -54,4 +54,4 @@ https://github.com/vishantbhadana/vireo-support-decisions
 
 https://vishantbhadana.github.io/vireo-support-decisions/
 
-Added after the original recording: free GitHub Pages hosts the aggregate dashboard and a separate synthetic-only classifier that runs in the visitor’s browser. Raw customer records and the customer-trained model remain private. The 56/60 audit and the walkthrough describe the original local application; they do not measure the public sample classifier. The original can be reproduced using the supplied pack and README. Public hosting and inference API charges: Rs 0 under GitHub Pages’ free public-repository plan; developer time and device/network costs remain separate.
+Free GitHub Pages hosts the aggregate dashboard and a separate synthetic-only classifier that runs in the visitor’s browser. Raw customer records and the customer-trained model remain private. The 56/60 audit measures the original local application only; the final walkthrough explicitly distinguishes it from the public sample classifier. The original can be reproduced using the supplied pack and README. Public hosting and inference API charges: Rs 0 under GitHub Pages’ free public-repository plan; developer time and device/network costs remain separate.

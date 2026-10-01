@@ -9,6 +9,7 @@ output-*.txt
 evaluation/blind-sample.csv
 evaluation/audit-results.csv
 recording/
+recording-v2/
 private/
 evaluation/labels.csv
 evaluation/report.json
