@@ -18,4 +18,4 @@ The historical charts, business calculation and audit summary are an aggregate s
 
 The public model's 110 Python/JavaScript reference fixtures, malformed input handling, and pre-round 0.70 threshold checks passed. These are implementation checks, not evidence of accuracy on unseen customer complaints. Browser checks cover chart changes, a delivery suggestion, empty input handling, and no classification network request.
 
-The original 1:40 video was recorded before this optional public demo was added and shows the original local classifier. The assignment has not been submitted through the hiring portal.
+The final captioned screen recording covers the actual prompt log, changes and discarded work, the original local model and the public synthetic demo. It distinguishes the two models and stays within the three-minute limit. The Google Drive URL is retained by uploading a new file version.
