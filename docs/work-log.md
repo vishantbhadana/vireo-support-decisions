@@ -24,3 +24,9 @@ Actually discarded/replaced: the incompatible runtime, slow roster lookup, same-
 ## Cost and time honesty
 
 No paid runtime calls or external customer-data uploads. Development used existing Codex access; its billing was not available. Run/month arithmetic is in decisions.md. Final elapsed working time is entered after packaging; it is not automatically set to the five-hour cap. The walkthrough records the actual local app and this process log, not a recreated chat or slides.
+
+## Optional public demo — 1 October 2026
+
+User requested: “still i would prefer to deploy it somewhere as that would look more professional”. Added a free GitHub Pages demonstration after the original local implementation and recording. The public dashboard uses an explicit aggregate-field allowlist. A separate classifier is trained only on 88 authored fictional phrases and runs inside the browser. The original customer-trained model stays local; its 56/60 audit is not claimed for the public sample model.
+
+Considered exporting hashed character n-grams from the original model, then rejected it: short n-grams can be enumerated, so hashes do not establish anonymization. Published synthetic training examples and reproducible Python/JavaScript parity tests instead. Automated implementation parity covers 110 fixtures plus invalid input, loading failure and scores on both sides of the review threshold before rounding. This does not establish unseen-complaint accuracy.
