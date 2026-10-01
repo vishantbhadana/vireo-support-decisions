@@ -64,9 +64,9 @@ def build():
     html = replace_once(html, review_js, '')
     html = replace_once(html, "fetch('/analysis.json')", "fetch('./analysis-public.json')")
     html = replace_once(html, 'Analysis unavailable. Run python analyze.py and restart the app.', 'The analysis snapshot could not load. Please reload the page or use the linked repository.')
-    html = replace_once(html, '<script>\nlet D;', '<script src="./demo-model.js"></script>\n<script>\nconst demoReady=VireoDemo.load("./demo-model.json");\nlet D;')
+    html = replace_once(html, '<script>\nlet D;', '<script src="./demo-model.js"></script>\n<script>\nconst demoReady=VireoDemo.load("./demo-model.json").then(()=>null,error=>error);\nlet D;')
     old = "const r=await fetch('/classify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:el('message').value})});if(!r.ok)throw Error('Please enter a valid message');const d=await r.json();"
-    html = replace_once(html, old, "await demoReady;const d=await VireoDemo.classify(el('message').value);")
+    html = replace_once(html, old, "const loadError=await demoReady;if(loadError)throw loadError;const d=await VireoDemo.classify(el('message').value);")
     html = replace_once(html, 'Classifying locally…', 'Checking the sample in your browser…')
     html = replace_once(html, 'Suggested for assisted triage', 'Sample-model suggestion')
     html = replace_once(html, 'Model labels derived from explicit closing-note issue phrases; separately annotated audit details in evaluation/report.json. No third-party scripts, analytics or fonts.', 'Original model labels came from closing notes; audit details can be regenerated privately from the supplied pack. Public interactive model uses only authored synthetic examples. No third-party scripts, analytics or fonts. Hosting: GitHub Pages.')
